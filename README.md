@@ -6,7 +6,7 @@ Si puo utilizzare questo chatbot come punto di partenza per creare assistenti pe
 
 Un esempio di conversazione con il bot:
 
-![Screenshot](./screenshots/demo_ss.png?raw=true)
+![Screenshot](./Example/esempio.png?raw=true)
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
