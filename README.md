@@ -56,13 +56,13 @@ Usa `rasa train` per addestrare il modello, una volta modificati i dati.
 rasa train
 ```
 
-Apri un'altra finestra , entra nel virtual enviroment, per eseguire il server di azioni personalizzate:
+In un'altra finestra, dopo essere entrato nel virtual env,  digita iseguenti comandi per avviare il server di azioni personalizzate:
 
 ```bash
 rasa run actions
 ```
 
-In un'altra finestra di terminale ancora , runna il  duckling server (per l'estrazione dientità):
+Apri un'altra finestra,ed esegui il  duckling server (per l'estrazione di entità):
 
 ```bash
 docker run -p 8000:8000 rasa/duckling
