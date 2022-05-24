@@ -86,7 +86,7 @@ npx http-server
 Lato Rasa invece digitare il seguente comando:
 
 ```bash
-rasa run -m models --enable-api -cors="*"
+rasa run -m models --enable-api --cors="*"
 ```
 
 
