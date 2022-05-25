@@ -1,0 +1,72 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>leo</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <!-- <div class="w3-display-topleft w3-padding-large w3-xlarge">
+      Leo
+    </div>
+    <div class="w3-display-middle">
+      <h1 class="w3-jumbo w3-animate-top">Say "OK LEO" for started</h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <p class="w3-large w3-center">Chiedici assistenza con facilità</p>
+    </div>
+    <div class="w3-display-bottomleft w3-padding-large">
+      Powered by CSC
+    </div> -->
+</div>
+
+
+
+
+  <button class="chatbox-open" onclick="openForm()" id="open">
+    <i class="fa fa-comment fa-2x" aria-hidden="true"></i>
+  </button>
+<button class="chatbox-close" onclick="closeForm()" id="close">
+    <i class="fa fa-close fa-2x" aria-hidden="true"></i>
+  </button>
+<section class="chatbox-popup" id="chatbot">
+  <header class="chatbox-popup__header">
+    <aside style="flex:3">
+      <i class="fa fa-user-circle fa-4x chatbox-popup__avatar" aria-hidden="true"></i>
+    </aside>
+    <aside style="flex:8">
+      <h1 class="ciao">Leo Assistant</h1> Bot(Online)
+    </aside>
+    <aside style="flex:1">
+      <button class="form"><i class="fa fa-window-maximize" aria-hidden="true"></i></button>
+    </aside>
+  </header>
+  <main class="chatbox-popup__main">
+   <div id="messages"></div>
+  </main>
+  <footer class="chatbox-popup__footer">
+    <aside style="flex:1;color:#888;text-align:center;">
+      <i class="fa fa-camera" aria-hidden="true"></i>
+    </aside>
+    <aside style="flex:10">
+      <textarea type="text" id="message-input" placeholder="Type your message here..." autofocus ></textarea>
+    </aside>
+    <aside style="flex:1;color:#888;text-align:center;">
+      <button class="form" id="form"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+    </aside>
+  </footer>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"
+integrity="sha512-PU5S6BA03fRv1Q5fpwXjg5nlRrgdoguZ74urFInkbABMCENyx5oP3hrDzYMMPh3qdLdknIvrGj3yqZ4JuU7Nag=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script  src="script.js"></script>
+</section> 
+
+</body>
+</html>
+
