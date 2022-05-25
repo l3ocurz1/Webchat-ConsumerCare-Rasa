@@ -59,13 +59,14 @@ responses:
  utter_out_of_scope:
   - text: Scusa, al momento non so rispondere a questa richiesta. Digita "help".
  utter_greet: 
-  - text: Ciao! Io sono il tuo IT Helpdesk Assistant.
+  - text: "Ciao! Io sono Leo l'assistente virtuale di Unicam. \n Sono qui per aiutarti."
+          
 
  utter_goodbye:
   - text: Arrivederci!
 
  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: I sono un bot, powered by Rasa.
  utter_ask_email:
   - text: Qual'è il tuo indirizzo email?
  utter_ask_incident_title:
@@ -77,11 +78,11 @@ responses:
  utter_ask_priority:
   - text: Che priorità diamo al ticket?
     buttons:
-      - payload: /inform{"priority":"low"}
+      - payload: /inform{"priority":"bassa"}
         title: bassa
-      - payload: /inform{"priority":"medium"}
+      - payload: /inform{"priority":"media"}
         title: media
-      - payload: /inform{"priority":"high"}
+      - payload: /inform{"priority":"alta"}
         title: alta
 
  utter_no_priority:
@@ -89,10 +90,14 @@ responses:
  utter_no_email:
   - text: Scusa, "{email}" non è nel sistema . Prova di nuovo.
  utter_help:
-  - text: " Ciao, siamo a vostra disposizione. \n
- Apri un ticket per ricevere assistenza da noi, 
- o chiedici a che punto è la tua richiesta.
-"      
+   - text: " Apri una richiesta per ricevere assistenza dalla segreteria studenti, 
+    o chiedici a che punto è la tua richiesta."
+     buttons:
+     - title: Apri una richiesta
+       payload: /open_incident
+     - title: visualizza stato richiesta
+       payload: /incident_status
+        
  
  utter_welcome: 
   - text: Benvenuto!
@@ -104,15 +109,15 @@ responses:
   - text: Vuoi utilizzare l'ultimo indirizzo mail, {previous_email}? 
 
  utter_ask_confirm:
-  - text: "Apriamo un ticket con i seguenti dettagli?
+  - text: "Apro una richiesta con i seguenti dettagli?
           \n    email: {email}
           \n    descrizione problema: {problem_description}
           \n    titolo: {incident_title}
           \n    priorità: {priority}"
     buttons:
-    - title: Yes
+    - title: apriamo
       payload: /affermativo
-    - title: No, cancella il ticket
+    - title:  cancella il ticket
       payload: /negativo
 
  utter_incident_creation_canceled:
@@ -147,8 +152,6 @@ forms:
         - type: from_text
           not_intent:
             - incident_status
-            - bot_challenge
-            - help
             - affermativo
             - negativo
       incident_title:
@@ -162,8 +165,6 @@ forms:
           intent: 
           not_intent:
             - incident_status
-            - bot_challenge
-            - help
             - affermativo
             - negativo
       confirm:
