@@ -33,6 +33,7 @@ nlu:
     - ey boss
     - I said, helllllloooooO!!!!
     - Well hello there ;)
+    - ok leo
 - intent: goodbye
   examples: |
     - bye
@@ -122,6 +123,7 @@ nlu:
     - thanks f
 - intent: bot_challenge
   examples: |
+    - come ti chiami?
     - tu sei un bot?
     - tu sei realmente un bot
     - sei un bot
@@ -202,6 +204,7 @@ nlu:
     - vorrei assistenza
     - puoi aiutarmi?
     - ho un problema
+    - apri una richiesta
     - vorrei aprire un ticket
     - vorrei aprire un problema [urgente]{"entity": "priority", "value":"high"}
     - vorrei aprire un problema [non] urgente{"entity": "priority", "value":"low"}
@@ -228,6 +231,7 @@ nlu:
     - can I open a ticket
     - pls help me open tix support
     - ticket support incident open now can you do that for me
+    - ticket
 - intent: help
   examples: |
     - ho bisogno di aiuto
@@ -300,24 +304,24 @@ nlu:
     - name.name@example.com
     - it is admin@example.com
     - aileen.mottern@example.com
-    - [low](priority)
-    - [medium](priority)
-    - [high](priority)
-    - it should be a [low](priority) priority
-    - it should be [medium](priority)
-    - [escalated]{"entity": "priority", "value": "high"}
-    - [escalate]{"entity": "priority", "value": "high"}
+    - [bassa](priority)
+    - [media](priority)
+    - [alta](priority)
+    - it should be a [bassa](priority) priority
+    - it should be [media](priority)
+    - [escalated]{"entity": "priority", "value": "alta"}
+    - [escalate]{"entity": "priority", "value": "alta"}
     - [super high](priority)
     - john
-    - the priority is [high](priority)
+    - the priority is [alta](priority)
     - test@gmail.com
     - xyz@example.com
     - my email is ella@rasa.com
     - abraham.lincoln@example.com
     - steve
     - sara@rasa.com
-    - [urgent]{"entity": "priority", "value": "high"}
-    - [critical]{"entity": "priority", "value": "high"}
+    - [urgent]{"entity": "priority", "value": "alta"}
+    - [critical]{"entity": "priority", "value": "alta"}
 - intent: out_of_scope
   examples: |
     - che tempo fa oggi
@@ -376,8 +380,12 @@ nlu:
     - has the ticket been closed yet?
     - is my issue still open
     - come sta messo il mio ticket?
+    - come sta messa la mia richiesta
+    - dove sta la mia richiesta
     - è da giorni che non ci sentiamo
     - che fine avete fatto
+    - status
+    - visualizza stato richiesta
 - intent: affermativo
   examples: |
     - yes
@@ -388,6 +396,8 @@ nlu:
     - yep
     - that's right
     - indeed
+    - apriamo il ticket
+    - apriamo
     - Yes, please
     - yeah
     - sure
@@ -434,6 +444,8 @@ nlu:
     - definitely not
     - deny
     - na
+    - no, cancella il ticket
+    - cancella il ticket
     - nah
     - nah I'm good
     - no
@@ -524,9 +536,4 @@ nlu:
     - let me speak to a real person
     - let me speak to a real person please
     - i want to talk to a real person
-- synonym: high
-  examples: |
-    - urgent
-    - really important
-    - escalated
-    - escalate
+
